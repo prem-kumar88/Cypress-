@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Change </title>
+    <style>
+        #content { font-size: 24px; text-align: center; margin-top: 20%; color:blue;}
+    </style>
+</head>
+<body>
+    <div id="content">Initial Content</div>
+    <script>
+        (function() {
+            const messages = ["Hello everyone","visit Techademy","learn cypress testing" , "practice the coures", "submit the assignments", 'Thanks for visiting!'];
+            let index = 0;
+            setInterval(() => {
+                document.getElementById('content').textContent = messages[index++ % messages.length];
+            }, 2000);    
+        })();
+    </script>
+</body>
+</html>
