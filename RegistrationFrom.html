@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        .form-container { max-width: 300px; margin:right; padding: 10px; }
+        .form-container input, .form-container button { width: 100%; padding: 8px; margin: 5px 0; }
+        .form-container button { background: #007BFF; color: white; border: none; cursor: pointer; }
+        .form-container button:hover { background: #0056b3; }  
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="number" placeholder="Phone Number" required>
+        <input type="Date" id="dob" required>
+        <input type="text" id="gender" placeholder="Gender" required>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <input type="text" id="password" placeholder="Password" required>
+
+        <button onclick="register()">Submit</button>
+    </div>
+
+    <script>
+        function register() {
+            const data = {
+                name: document.getElementById('name').value,
+                number: document.getElementById("number").value,
+                age: document.getElementById('age').value,
+                gender: document.gerElementById('gender').value,
+                email: document.getElementById('email').value,
+
+                nation : document.gerElementById("password").value
+
+            };
+            alert('Registration Data: ' + JSON.stringify(data));
+        }
+    </script>
+</body>
+</html>
+
+
+
